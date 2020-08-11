@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Neuemontreal';
+  src: url('https://uploads-ssl.webflow.com/5ea878bc45345b7e48c18cb7/5ea8797ecc3be945624835c8_NeueMontreal-Regular.woff2') format('woff2'), url('https://uploads-ssl.webflow.com/5ea878bc45345b7e48c18cb7/5ea8797bd87d1767a7ea11f0_NeueMontreal-Regular.eot') format('embedded-opentype'), url('https://uploads-ssl.webflow.com/5ea878bc45345b7e48c18cb7/5ea8797b8b4bc05b6134e839_NeueMontreal-Regular.woff') format('woff'), url('https://uploads-ssl.webflow.com/5ea878bc45345b7e48c18cb7/5ea8797b4af57c08ffc98079_NeueMontreal-Regular.ttf') format('truetype'), url('https://uploads-ssl.webflow.com/5ea878bc45345b7e48c18cb7/5ea8797b8b4bc0954f34e836_NeueMontreal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.chart {
+  background-color: #333;
+}
+
+.generic-area{
+  border: 20px;
+  background-color:rgba(20, 20, 20, .6);
+}
+
+body {
+  font-family: 'Neuemontreal', Fallback, sans-serif;
+  background-color: #000;
+  padding: 50px;
+  margin: 0;
+  color: white;
+  text-align: LEFT;
+  background-image: url("/im/logo.svg");
+  background-position: top center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-attachment: fixed;
+}
+
+.flexHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: #ab7d63;
+  background-color: rgb(0, 0, 0, .9);
+}
+
+a {
+  color: #00B7FF;
+}
+
+body select {
+  padding: 10px 70px 10px 13px;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  background: url("https://i.ibb.co/b7xjLrB/selectbox-arrow.png") right center no-repeat;
+  background-color: #333;
+  color: #fff;
+  line-height: 16px;
+  appearance: none;
+  /* this is must */ -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* body select.select_box option */
+body select option {
+  padding: 0 4px;
+}
+
+/* for Edge */
+select::-ms-expand {
+  display: none;
+}
+
+select:disabled::-ms-expand {
+  background: #f60;
+}
