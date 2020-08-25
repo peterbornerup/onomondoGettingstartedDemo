@@ -39,6 +39,7 @@ async function convertIotHubToEventHubsConnectionString(connectionString) {
 
     // Verify that the required info is in the connection string.
     if (!HostName || !SharedAccessKey || !SharedAccessKeyName) {
+        console.log(connectionString);
         throw new Error(`Invalid IotHub connection string.`);
     }
 

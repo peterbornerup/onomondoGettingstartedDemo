@@ -11,6 +11,7 @@
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/chart-device-data.js" type="text/javascript" charset="utf-8"></script>
     <link href="css/style.css" rel="stylesheet" />
@@ -32,28 +33,45 @@
         <div class="row" style="margin:40px">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 generic-area" style="margin-top:200px">
                 
-                <h3>Hola!</h3>
+                <h3>
+                    Welcome to Onomondo Getting Started demo app
+                </h3>
 
                 <p>
-                    neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  
-                    Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  
+                   Onomondo is hosting a simple webapp that demonstrates the usage of Onomondo’s connectors.  </p>
+                <p>
+                    The full source code is available at <a href="https://github.com/peterbornerup/onomondoGettingstartedDemo">this repo</a> which is a 
+                    modified version of the Azure IoT Hub example found <a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps">here</a>. 
                 </p>
                 <p>
-
-                    Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  
-                    Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  Some neat introduction...?  
+                    To get started simiply push the button on the device provided by Onomondo and watch the magic happen!
                 </p>
             </div>
         </div>
-        <div class="row">
+        <div class="row"">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" >
-
-                
                 <div class="chart">
                     <canvas id="iotChart"></canvas>
                 </div>
             </div>
      
+        </div>
+        <div class="row" style="margin:40px">
+
+            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 generic-area">
+                
+                <h3>
+                    What's being transmitted?
+                </h3>
+                
+                <p>
+                    As the button is pushed the device wakes up from deep sleep and measures the remaing battery capacity and checks the signal quality reported 
+                    by the SIM800 modem. The process is repeated five times and the data is sent in individual JSON formatted packages. The signal quality can be decoded using the table found <a href="https://m2msupport.net/m2msupport/atcsq-signal-quality/">here</a> 
+                but as a rule of thumb anything over 10 is acceptable. </p>
+              
+                    
+                </div>
+            </div>
         </div>
     </div>
 </body>

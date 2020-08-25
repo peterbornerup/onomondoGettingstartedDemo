@@ -18,13 +18,20 @@ $(document).ready(() => {
     constructor(deviceId) {
       this.deviceId = deviceId;
       this.maxLen = 50;
-      this.timeData = new Array(this.maxLen);
-      this.voltageData = new Array(this.maxLen);
-      this.signalData = new Array(this.maxLen);
+      this.timeData = new Array();
+      this.voltageData = new Array();
+      this.signalData = new Array();
     }
 
-    addData(time, voltage, signal) {
-      this.timeData.push(time);
+      addData(time, voltage, signal) {
+      var temp = new Date(time);
+
+
+
+      this.timeData.push(temp.getTime());
+
+      console.log("time in ms",typeof temp.getTime(), temp.getTime());
+        console.log(this.timeData);
       this.voltageData.push(voltage);
       this.signalData.push(signal || null);
 
@@ -73,6 +80,7 @@ $(document).ready(() => {
         pointHoverBackgroundColor: 'rgba(171,125,99, 1)',
         pointHoverBorderColor: 'rgba(171,125,99, 1)',
         spanGaps: true,
+        lineTension: 0,
       },
       {
         fill: false,
@@ -91,11 +99,14 @@ $(document).ready(() => {
   const chartOptions = {
     scales: {
       xAxes: [{
+        type: 'time',
+        distribution: 'linear',
+        ticks: {
+          beginAtZero: false
+        },
         time: {
-          displayFormats: {
-              quarter: 'MMM YYYY'
-          }
-      }
+          unit: 'second'
+        }
       }],
       yAxes: [{
         id: 'Voltage',
@@ -112,6 +123,9 @@ $(document).ready(() => {
         scaleLabel: {
           labelString: 'Signal quality',
           display: true,
+        },
+        ticks:{
+          beginAtZero : true
         },
         position: 'right',
       }]
@@ -169,10 +183,6 @@ $(document).ready(() => {
       
       
       if(deviceID != simIDUser){
-      console.log(deviceID, simIDUser);
-
-
-        console.log("Wrong id");
         return;
       }
 
