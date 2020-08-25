@@ -58,7 +58,7 @@ wss.broadcast = (data) => {
   });  
 };
 
-server.listen('9000', () => {
+server.listen(process.env.PORT || '9000', () => {
   console.log('Listening on %d.', server.address().port);
 });
 

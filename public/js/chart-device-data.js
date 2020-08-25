@@ -102,7 +102,9 @@ $(document).ready(() => {
         type: 'time',
         distribution: 'linear',
         ticks: {
-          beginAtZero: false
+          beginAtZero: false,
+          autoSkip: true,
+          maxTicksLimit: 5
         },
         time: {
           unit: 'second'
@@ -111,6 +113,10 @@ $(document).ready(() => {
       yAxes: [{
         id: 'Voltage',
         type: 'linear',
+        ticks:{
+          suggestedMin: 2,
+          suggestedMax: 4.3
+        },
         scaleLabel: {
           labelString: 'Battery voltage',
           display: true,
@@ -120,6 +126,10 @@ $(document).ready(() => {
       {
         id: 'Signal',
         type: 'linear',
+        ticks:{
+          suggestedMin: 0,
+          suggestedMax: 35
+        },
         scaleLabel: {
           labelString: 'Signal quality',
           display: true,

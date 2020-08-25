@@ -13,6 +13,7 @@
 .generic-area{
   border: 20px;
   background-color:rgba(20, 20, 20, .6);
+  font-size: 1.2em;
 }
 
 body {

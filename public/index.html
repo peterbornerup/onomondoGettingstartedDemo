@@ -26,52 +26,34 @@
 
 
     <div class="page-header">
-        <h1>Temperature & Humidity Real-time Data</h1>
+        <h1>Temperature and Battery Voltage Real-time Data</h1>
+        <h3>A demonstration of Onomondo connectors </h3>
       </div>
     
 
         <div class="row" style="margin:40px">
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 generic-area" style="margin-top:200px">
+            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 generic-area" style="margin-top:150px">
                 
                 <h3>
                     Welcome to Onomondo Getting Started demo app
                 </h3>
 
                 <p>
-                   Onomondo is hosting a simple webapp that demonstrates the usage of Onomondo’s connectors.  </p>
+                   Onomondo is hosting a simple webapp that demonstrates the usage of Onomondo’s connectors. The webpage is hosted on the Azure Cloud service completely independent of Onomondo. All data displayed is being streamed form Azure IoT Hub. 
+                      </p>
                 <p>
-                    The full source code is available at <a href="https://github.com/peterbornerup/onomondoGettingstartedDemo">this repo</a> which is a 
-                    modified version of the Azure IoT Hub example found <a href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps">here</a>. 
-                </p>
-                <p>
-                    To get started simiply push the button on the device provided by Onomondo and watch the magic happen!
+                    The full source code is available at <a style="color: #ab7d63" href="https://github.com/peterbornerup/onomondoGettingstartedDemo">this repo</a> which is a 
+                    modified version of the Azure IoT Hub example found <a style="color: #ab7d63" href="https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-live-data-visualization-in-web-apps">here</a>. 
                 </p>
             </div>
         </div>
-        <div class="row"">
+        <div class="row">
             <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" >
                 <div class="chart">
                     <canvas id="iotChart"></canvas>
                 </div>
             </div>
      
-        </div>
-        <div class="row" style="margin:40px">
-
-            <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 generic-area">
-                
-                <h3>
-                    What's being transmitted?
-                </h3>
-                
-                <p>
-                    As the button is pushed the device wakes up from deep sleep and measures the remaing battery capacity and checks the signal quality reported 
-                    by the SIM800 modem. The process is repeated five times and the data is sent in individual JSON formatted packages. The signal quality can be decoded using the table found <a href="https://m2msupport.net/m2msupport/atcsq-signal-quality/">here</a> 
-                but as a rule of thumb anything over 10 is acceptable. </p>
-              
-                    
-                </div>
-            </div>
         </div>
     </div>
 </body>
