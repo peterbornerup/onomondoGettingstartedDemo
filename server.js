@@ -55,7 +55,7 @@ wss.broadcast = (data) => {
         console.error(e);
       }
     }
-  });
+  });  
 };
 
 server.listen('9000', () => {
